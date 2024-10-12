@@ -1,0 +1,65 @@
+<Page
+    x:Class="WpfApp6.Pages.Donate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Donate">
+
+    <Page.Resources>
+        <Style x:Key="DonateButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" Background="transparent" CornerRadius="5" BorderBrush="White" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FF3700B3" />
+                                <Setter TargetName="ButtonBorder" Property="ScaleTransform.ScaleX" Value="1.1"/>
+                                <Setter TargetName="ButtonBorder" Property="ScaleTransform.ScaleY" Value="1.1"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FF03DAC5" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Storyboard x:Key="FadeInStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="DonateButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1" />
+        </Storyboard>
+    </Page.Resources>
+
+    <Grid Background="Transparent" VerticalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+
+            <TextBlock Text="Support Us" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="White" Height="69" Width="131" 
+                       />
+
+            <Grid Background="Transparent" VerticalAlignment="Center">
+                <Button x:Name="DonateButton" 
+                        Content="Click Here To Donate"
+                        
+                        
+                        
+                        Width="150" 
+                        Height="40" 
+                        Style="{StaticResource DonateButtonStyle}" 
+                        Click="DonateButton_Click" 
+                        Opacity="0"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

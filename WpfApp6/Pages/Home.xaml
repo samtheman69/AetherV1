@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="WpfApp6.Pages.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp6.Pages"
+             mc:Ignorable="d" Width="386" Height="364">
+
+    <UserControl.Resources>
+        <Storyboard x:Key="FadeInStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="LaunchButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1" />
+            <DoubleAnimation
+                Storyboard.TargetName="DiscordButton"
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1" />
+        </Storyboard>
+    </UserControl.Resources>
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="196" Source="/Pages/Logo.png" RenderTransformOrigin="1.268,0.599" Margin="106,19,0,0">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.087"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
+        <Button 
+    x:Name="LaunchButton" 
+    Content="Launch" 
+    Width="186" 
+    Height="60" 
+    Margin="0,269,0,0" 
+    Background="Transparent" 
+    VerticalAlignment="Top" 
+    HorizontalAlignment="Center" 
+    Click="Button_Click" 
+    Opacity="0" />
+
+        <Button 
+    x:Name="DiscordButton" 
+    Content="Join The Discord" 
+    Width="186" 
+    Height="60" 
+    Margin="0,209,0,0" 
+    Background="Transparent" 
+    VerticalAlignment="Top" 
+    HorizontalAlignment="Center" 
+    Click="DiscordButton_Click" 
+    Opacity="0" />
+    </Grid>
+
+</UserControl>
