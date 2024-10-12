@@ -67,7 +67,7 @@
                 </ui:NavigationView.MenuItems>
             </ui:NavigationView>
 
-            <ui:Frame x:Name="ContentFrame" Margin="139,24,0,0" x:FieldModifier="public" Grid.ColumnSpan="4">
+            <ui:Frame x:Name="ContentFrame" Margin="139,0,0,0" x:FieldModifier="public" Grid.ColumnSpan="4">
                 <ui:Frame.ContentTransitions>
                     <ui:TransitionCollection>
                         <ui:NavigationThemeTransition />

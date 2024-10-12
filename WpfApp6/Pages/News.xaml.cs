@@ -19,23 +19,22 @@ namespace WpfApp6.Pages
             LoadNews();
         }
 
-        // Method to load news data
         private void LoadNews()
         {
             List<NewsItem> newsItems = new List<NewsItem>
             {
-                new NewsItem { Title = "New Fortnite Update", Description = "Fortnite v12.41 released with exciting new features and skins!" },
+                new NewsItem { Title = "New Aether Update!", Description = "Fortnite v12.41 released with exciting new features and skins!" },
+                new NewsItem { Title = "V-Bucks On Kill", Description = "You Can Now Earn Vbucks On Kill And Win!" },
+
             };
 
-            // Bind the news items to the ListView
             NewsListView.ItemsSource = newsItems;
         }
 
-        // Event handler for refreshing news
         private void RefreshNews_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("News refreshed!");
-            LoadNews(); // In a real-world scenario, this would reload or fetch updated news
+            LoadNews();
         }
     }
 }
