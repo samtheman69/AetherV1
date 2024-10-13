@@ -55,9 +55,8 @@
                 <Button Content="..." Width="30" Click="Button_Click" VerticalAlignment="Center" 
                         HorizontalAlignment="Left" Style="{StaticResource ModernButtonStyle}" Height="39" Margin="370,0,0,0"/>
             </Grid>
-
-            <Button Content="Save Path" Width="120" Height="40" Click="Button_Click_1" 
-                    Style="{StaticResource ModernButtonStyle}" Margin="0,10,0,0"/>
+            <Button Content="Save Path" Width="120" Height="30" Click="Button_Click_1" 
+                    Style="{StaticResource ModernButtonStyle}"/>
             <Button Content="Download Build" Width="120" Height="40" Click="DownloadButton_Click" 
                     Style="{StaticResource ModernButtonStyle}"/>
         </StackPanel>

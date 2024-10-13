@@ -20,9 +20,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace WpfApp6.Pages
 {
-	/// <summary>
-	/// Interaction logic for Settings.xaml
-	/// </summary>
 	public partial class Settings : UserControl
 	{
 		public Settings()
@@ -32,9 +29,7 @@ namespace WpfApp6.Pages
 
 		private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
 		{
-			//Regex r = new Regex(@"^[a-zA-Z@]+$");
-			//if (!r.IsMatch(e.Text))
-				//e.Handled = true;
+
 		}
 
 		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)

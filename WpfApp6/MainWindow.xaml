@@ -37,7 +37,7 @@
                        Foreground="White"/>
         </StackPanel>
 
-        <Grid Grid.Row="1" Background="Black">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="315*"/>
                 <ColumnDefinition Width="4*"/>
@@ -45,29 +45,22 @@
                 <ColumnDefinition Width="481*"/>
             </Grid.ColumnDefinitions>
 
-            <ui:NavigationView x:Name="NavView" Loaded="NavView_Loaded" SelectionChanged="NavView_SelectionChanged"
-                               PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" 
-                               IsPaneToggleButtonVisible="False" IsPaneOpen="True" 
-                               HorizontalAlignment="Left" Width="135" RenderTransformOrigin="0.5,0.5">
+            <Border Background="Black">
+                <ui:NavigationView x:Name="NavView" Loaded="NavView_Loaded" SelectionChanged="NavView_SelectionChanged"
+                                   PaneDisplayMode="Left" IsBackButtonVisible="Collapsed" 
+                                   IsPaneToggleButtonVisible="False" IsPaneOpen="True" 
+                                   HorizontalAlignment="Left" Width="135">
 
-                <ui:NavigationView.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="1.375"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="1.608"/>
-                    </TransformGroup>
-                </ui:NavigationView.RenderTransform>
+                    <ui:NavigationView.MenuItems>
+                        <ui:NavigationViewItem Content="News" Tag="News"/>
+                        <ui:NavigationViewItem Icon="Play" Content="Play" Tag="Home"/>
+                        <ui:NavigationViewItem Icon="Library" Content="Library" Tag="Library" Width="317"/>
+                        <ui:NavigationViewItem Icon="Shop" Content="Donate" Tag="Donate"/>
+                    </ui:NavigationView.MenuItems>
+                </ui:NavigationView>
+            </Border>
 
-                <ui:NavigationView.MenuItems>
-                    <ui:NavigationViewItem Content="News" Tag="News"/>
-                    <ui:NavigationViewItem Icon="Play" Content="Play" Tag="Home"/>
-                    <ui:NavigationViewItem Icon="Library" Content="Library" Tag="Library" Width="317"/>
-                    <ui:NavigationViewItem Icon="Shop" Content="Donate" Tag="Donate"/>
-                </ui:NavigationView.MenuItems>
-            </ui:NavigationView>
-
-            <ui:Frame x:Name="ContentFrame" Margin="139,0,0,0" x:FieldModifier="public" Grid.ColumnSpan="4">
+            <ui:Frame x:Name="ContentFrame" Margin="139,24,0,0" x:FieldModifier="public" Grid.ColumnSpan="4">
                 <ui:Frame.ContentTransitions>
                     <ui:TransitionCollection>
                         <ui:NavigationThemeTransition />

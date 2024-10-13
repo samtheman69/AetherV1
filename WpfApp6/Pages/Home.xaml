@@ -20,7 +20,7 @@
     </UserControl.Resources>
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="167" Source="/Pages/Logo.png" RenderTransformOrigin="1.268,0.599" Margin="106,19,0,0">
+        <Image HorizontalAlignment="Left" Height="175" VerticalAlignment="Top" Width="196" Source="/Pages/Logo.png" RenderTransformOrigin="1.268,0.599" Margin="106,19,0,0">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
