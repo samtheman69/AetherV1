@@ -23,6 +23,23 @@
                 Storyboard.TargetProperty="Opacity"
                 From="1" To="0" Duration="0:0:0.15" />
         </Storyboard>
+
+        <Style x:Key="CustomNavigationViewItemStyle" TargetType="ui:NavigationViewItem">
+            <Setter Property="Background" Value="LightBlue"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="LightBlue"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid Background="Black">
@@ -52,10 +69,10 @@
                                    HorizontalAlignment="Left" Width="135">
 
                     <ui:NavigationView.MenuItems>
-                        <ui:NavigationViewItem Content="News" Tag="News"/>
-                        <ui:NavigationViewItem Icon="Play" Content="Play" Tag="Home"/>
-                        <ui:NavigationViewItem Icon="Library" Content="Library" Tag="Library" Width="317"/>
-                        <ui:NavigationViewItem Icon="Shop" Content="Donate" Tag="Donate"/>
+                        <ui:NavigationViewItem Content="News" Tag="News" Style="{StaticResource CustomNavigationViewItemStyle}" Width="315" Height="66"/>
+                        <ui:NavigationViewItem Icon="Play" Content="Play" Tag="Home" Style="{StaticResource CustomNavigationViewItemStyle}" Height="62"/>
+                        <ui:NavigationViewItem Icon="Library" Content="Library" Tag="Library" Width="317" Style="{StaticResource CustomNavigationViewItemStyle}" Height="62"/>
+                        <ui:NavigationViewItem Icon="Shop" Content="Donate" Tag="Donate" Style="{StaticResource CustomNavigationViewItemStyle}" Height="63"/>
                     </ui:NavigationView.MenuItems>
                 </ui:NavigationView>
             </Border>
