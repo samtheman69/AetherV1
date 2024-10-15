@@ -25,20 +25,28 @@
         </Storyboard>
 
         <Style x:Key="CustomNavigationViewItemStyle" TargetType="ui:NavigationViewItem">
-            <Setter Property="Background" Value="LightBlue"/>
-            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <!-- Set to Transparent -->
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Padding" Value="10,5"/>
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Cursor" Value="Hand"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="LightBlue"/>
+                    <Setter Property="Background" Value="DarkGray"/>
                 </Trigger>
                 <Trigger Property="IsSelected" Value="True">
-                    <Setter Property="Background" Value="LightBlue"/>
+                    <Setter Property="Background" Value="Gray"/>
                 </Trigger>
             </Style.Triggers>
+        </Style>
+
+        <Style TargetType="ui:NavigationView">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="IsBackButtonVisible" Value="Collapsed"/>
+            <Setter Property="IsPaneToggleButtonVisible" Value="False"/>
         </Style>
     </Window.Resources>
 
@@ -54,7 +62,7 @@
                        Foreground="White"/>
         </StackPanel>
 
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Background="Black">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="315*"/>
                 <ColumnDefinition Width="4*"/>
@@ -77,7 +85,7 @@
                 </ui:NavigationView>
             </Border>
 
-            <ui:Frame x:Name="ContentFrame" Margin="139,24,0,0" x:FieldModifier="public" Grid.ColumnSpan="4">
+            <ui:Frame x:Name="ContentFrame" Margin="121,0,0,0" x:FieldModifier="public" Grid.ColumnSpan="4" Background="Black">
                 <ui:Frame.ContentTransitions>
                     <ui:TransitionCollection>
                         <ui:NavigationThemeTransition />

@@ -22,7 +22,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="ButtonBorder" Property="Background" Value="#FFD700"/>
+                                <Setter TargetName="ButtonBorder" Property="Background" Value="BLUE"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="ButtonBorder" Property="Background" Value="#FF03DAC5"/>
@@ -46,9 +46,8 @@
     <Grid Background="#FF121212">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="490">
 
-            <Image Source="/Pages/Splash.png" Width="461" Height="336"/>
-
-            <Label Content="Path:" Foreground="White" FontSize="16" Margin="0,0,0,10"/>
+            <Image Source="/Pages/Splash.png" Width="400" Height="178"/>
+            <Label Content="Path:" Foreground="White" FontSize="16"/>
             <Grid Margin="0,0,0,20">
                 <TextBox x:Name="PathBox" Style="{StaticResource ModernTextBoxStyle}" TextWrapping="Wrap" 
                          VerticalAlignment="Top" TextChanged="PathBox_TextChanged"/>
