@@ -26,7 +26,6 @@
 
         <Style x:Key="CustomNavigationViewItemStyle" TargetType="ui:NavigationViewItem">
             <Setter Property="Background" Value="Transparent"/>
-            <!-- Set to Transparent -->
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Padding" Value="10,5"/>
