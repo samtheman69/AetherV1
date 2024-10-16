@@ -67,5 +67,23 @@ namespace WpfApp6.Pages
                 UseShellExecute = true
             });
         }
+
+        private void HelpButton_Click(object sender, RoutedEventArgs e)
+        {
+            string discordLink = "https://discord.gg/NejQ4NyBVV";
+
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = discordLink,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while trying to open the link: {ex.Message}");
+            }
+        }
     }
 }

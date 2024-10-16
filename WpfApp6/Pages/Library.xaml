@@ -43,21 +43,39 @@
         </Style>
     </Page.Resources>
 
-    <Grid Background="#FF121212">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="490">
+    <Grid Background="Transparent">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Height="600" Margin="20">
 
-            <Image Source="/Pages/Splash.png" Width="400" Height="178"/>
-            <Label Content="Path:" Foreground="White" FontSize="16"/>
+            <TextBlock Text="Library Features" 
+                       FontSize="18" 
+                       FontWeight="Bold" 
+                       Foreground="White" 
+                       />
+            <TextBlock Text="Easily manage your game builds and configurations. Use the options above to set paths and download builds effortlessly." 
+                       Foreground="White" 
+                       FontSize="14" 
+                       TextWrapping="Wrap" Height="43" 
+                       />
+
+            <Image Source="/Pages/Splash.jpg" Width="380" Height="242" Margin="0,0,0,20"/>
+
+            <Label Content="Path:" Foreground="White" FontSize="16" Margin="0,0,0,5"/>
+
             <Grid Margin="0,0,0,20">
                 <TextBox x:Name="PathBox" Style="{StaticResource ModernTextBoxStyle}" TextWrapping="Wrap" 
                          VerticalAlignment="Top" TextChanged="PathBox_TextChanged"/>
                 <Button Content="..." Width="30" Click="Button_Click" VerticalAlignment="Center" 
                         HorizontalAlignment="Left" Style="{StaticResource ModernButtonStyle}" Height="39" Margin="370,0,0,0"/>
             </Grid>
-            <Button Content="Save Path" Width="120" Height="30" Click="Button_Click_1" 
-                    Style="{StaticResource ModernButtonStyle}"/>
+
+            <Button Content="Save Path" Width="120" Height="40" Click="Button_Click_1" 
+                    Style="{StaticResource ModernButtonStyle}" Margin="0,0,0,10"/>
+
             <Button Content="Download Build" Width="120" Height="40" Click="DownloadButton_Click" 
+                    Style="{StaticResource ModernButtonStyle}" Margin="0,0,0,10"/>
+            <Button Content="Help" Width="120" Height="40" Click="HelpButton_Click" 
                     Style="{StaticResource ModernButtonStyle}"/>
+
         </StackPanel>
     </Grid>
 </Page>

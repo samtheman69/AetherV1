@@ -16,12 +16,20 @@
                 Storyboard.TargetName="DiscordButton"
                 Storyboard.TargetProperty="Opacity"
                 From="0" To="1" Duration="0:0:1" />
+            <DoubleAnimation
+                Storyboard.TargetName="WelcomeText"
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1" />
+            <DoubleAnimation
+                Storyboard.TargetName="DescriptionText"
+                Storyboard.TargetProperty="Opacity"
+                From="0" To="1" Duration="0:0:1" />
         </Storyboard>
     </UserControl.Resources>
 
     <Border Background="Transparent" Margin="20">
-        <Grid>
-            <Image HorizontalAlignment="Left" Width="178" Source="/Pages/Logo.png" Margin="87,28,0,137">
+        <Grid Margin="-186,-38,-168,-23">
+            <Image HorizontalAlignment="Center" Width="178" Source="/Pages/Logo.png" Margin="0,28,0,0">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -32,13 +40,31 @@
                 </Image.RenderTransform>
             </Image>
 
+            <TextBlock x:Name="WelcomeText" 
+                       Text="Welcome to Aether!" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="White" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,80,0,0" 
+                       Opacity="0" />
+
+            <TextBlock x:Name="DescriptionText" 
+                       Text="Your ultimate gaming experience starts here. Join our community and dive into the action!" 
+                       FontSize="14" 
+                       Foreground="White" 
+                       HorizontalAlignment="Center" 
+                       Margin="20,10,20,0" 
+                       TextAlignment="Center" 
+                       Opacity="0" />
+
             <Button 
                 x:Name="LaunchButton" 
                 Content="Start Game" 
                 Width="200" 
                 Height="50" 
-                Margin="0,291,0,0" 
-                Background="LightBlue" 
+                Margin="0,302,0,0" 
+                Background="Transparent" 
                 Foreground="White" 
                 FontWeight="Bold"
                 VerticalAlignment="Top" 
@@ -51,14 +77,15 @@
                 Content="Join The Discord Server" 
                 Width="200" 
                 Height="50" 
-                Margin="0,241,0,0" 
-                Background="LightBlue" 
+                Margin="0,364,0,0" 
+                Background="Transparent" 
                 Foreground="White" 
                 FontWeight="Bold"
                 VerticalAlignment="Top" 
                 HorizontalAlignment="Center" 
                 Click="DiscordButton_Click" 
-                Opacity="0" RenderTransformOrigin="0.5,0.5" >
+                Opacity="0" 
+                RenderTransformOrigin="0.5,0.5">
                 <Button.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -68,6 +95,8 @@
                     </TransformGroup>
                 </Button.RenderTransform>
             </Button>
+
+            <Border Height="2" Background="White" Margin="0,295,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
         </Grid>
     </Border>
 </UserControl>
